@@ -1,0 +1,26 @@
+<div class="container mb-5">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex gap-3 mb-5">
+            <input type="text" class="forms_input" placeholder="Ingresa el curso aquí" #inputCursos autofocus>
+            <button class="btn__agregar" (click)="agregarCurso(inputCursos.value)">Agregar</button>
+        </div>
+        <div class="container d-flex justify-content-center ">
+            
+            <table class="table w-50">
+                <thead class="text-center tabla__bg">
+                    <tr>
+                        <th class="tabla__titulo">N°</th>
+                        <th class="tabla__titulo">cursos</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr *ngFor="let nombre of cursosArray; index as i">
+                        <td class="text-center">{{i+1}}</td>
+                        <td>{{nombre}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
